@@ -12,7 +12,7 @@ class Matplotlib <Formula
     ENV['CFLAGS'] = "-arch x86_64 -I/usr/local/include -isysroot /Developer/SDKs/MacOSX" + ENV['MACOSX_DEPLOYMENT_TARGET'] + ".sdk"
     ENV['LDFLAGS'] = "-arch x86_64 -syslibroot,/Developer/SDKs/MacOSX" + ENV['MACOSX_DEPLOYMENT_TARGET'] + ".sdk"
     ENV['FFLAGS'] = "-arch x86_64"
-    ENV['PYTHONPATH'] = "/usr/local/lib/python2.7/site-packages/"
+    ENV['PYTHONPATH'] = "/usr/local/Cellar/python/2.7/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages"
     system "python", "setup.py", "install", "--prefix=#{prefix}"
   end
 end
